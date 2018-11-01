@@ -1,0 +1,10 @@
+{
+  "name": "@entrinsik/data-cookbook",
+  "version": "0.0.1",
+  "description": "Data Cookbook Informer Extensions",
+  "author": "",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "http://docker.entrinsik.com/repository/entNPM/"
+  }
+}
