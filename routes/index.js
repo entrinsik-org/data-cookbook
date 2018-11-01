@@ -1,7 +1,5 @@
 'use strict';
 
-exports.assets = function () {
-    return [
-        { path: '/cookbook/config.js', method: 'get', config: require('./config').get }
+module.exports = [
+        { path: '/dcb/{type}/{id}/document.html', method: 'get', config: require('./cookbook-doc').get }
     ];
-};

@@ -15,6 +15,6 @@
     }
 
     angular.module('informer')
-        .directive('infDatacookbookFeature', infDatacookbookFeature());
+        .directive('infDatacookbookFeature', infDatacookbookFeature);
 })();
 

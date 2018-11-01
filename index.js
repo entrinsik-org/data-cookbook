@@ -25,6 +25,8 @@ exports.register = function (server, opts, next) {
         }
     });
 
+    server.deployer('api').route(require('./routes'));
+
     next();
 };
 
