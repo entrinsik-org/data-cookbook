@@ -1,10 +1,6 @@
 # data-cookbook
 Informer 5.0 support for Data Cookbook
 
-mma
-
-Row level security plugin
-
 Purpose
 
 Adds an Actions menu option for interfacing with iData's Data Cookbook product for Datasources, Datasets, and Reports.
@@ -15,5 +11,6 @@ Create the appopriate Specifications in the Cookbook, naming them the same as th
 
 Installation and Configuration
 
-npm install @entrinsik/mma
+npm install @entrinsik/data-cookbook
 
+Enable the feature under Administration and provide the Data Cookbook's URL
