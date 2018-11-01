@@ -1,7 +1,11 @@
 (function () {
     'use strict';
 
-    function config(actionsProvider) {
+    function config(actionsProvider, componentProvider) {
+
+        //adding to the features page
+        componentProvider.component('datacookbookFeature', '<inf-datacookbook-feature ng-model="$component.ngModel"></inf-datacookbook-feature>');
+
         actionsProvider.action({
             id: 'dataset-cookbook',
             name: 'Data Cookbook',
