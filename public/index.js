@@ -57,7 +57,22 @@
                 // $window.open('https://examples.datacookbook.com/dcb_spec_summary.php?lookup='+report.name+'&matchType=exact_text','datacookbook','scrollbars=yes,center,height=600,width=450');
             }]
         });
-
+        actionsProvider.action({
+            id: 'adhoc-cookbook',
+            name: 'Data Cookbook',
+            materialIcon: 'local_dining',
+            context: ['adhoc.view'],
+            isEligible: function () {
+                return true;
+            },
+            invoke: ['query', '$window', 'api', function (adhoc, $window, api) {
+                api.link('dcb:document')
+                    .getHref({ type: 'adhoc', id: adhoc.name })
+                    .then(function (url) {
+                        $window.open(url,'datacookbook','scrollbars=yes,center,height=600,width=450');
+                    });
+            }]
+        });
         
     }
 
