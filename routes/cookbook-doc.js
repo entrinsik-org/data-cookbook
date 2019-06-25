@@ -5,7 +5,7 @@ const joi = require('joi');
 
 function cookbookUrl (req, reply) {
     req.model('SystemFeature').findById('cookbook')
-        .then(feature => feature ? `${feature.data.host}?lookup=${req.params.id}&matchType=exact_text` : boom.notFound())
+        .then(feature => feature ? `${feature.data.host}/institution/search?query=${req.params.id}` : boom.notFound())
         .nodeify(reply);
 }
 

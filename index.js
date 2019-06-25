@@ -3,16 +3,6 @@
 exports.register = function (server, opts, next) {
     server.injector().inject(server.bundle('cookbook').scan(__dirname, 'public'));
 
-    server.drivers('scriptContext', {
-        id: 'add',
-        populate: function (ctx, qr) {
-            ctx.add = function (n1, n2) {
-                return n1 + n2;
-            };
-
-            return ctx;
-        }
-    });
 
     server.driver('systemFeature', {
         id: 'cookbook',
